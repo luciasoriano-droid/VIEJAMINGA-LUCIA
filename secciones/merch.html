@@ -24,37 +24,41 @@
 </head>
 
 <body>
-
-  
-  <nav class="navbar navbar-vm navbar-expand-lg sticky-top" id="navbar-principal">
-    <div class="container-fluid">
-      <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand mx-auto" href="../index.html">VIEJA MINGA</a>
-      <button class="cart-btn ms-2" id="btn-carrito" aria-label="Carrito">
-        <i class="bi bi-cart3"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto gap-lg-2 mt-3 mt-lg-0">
-          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="shows.html">Shows</a></li>
-          <li class="nav-item"><a class="nav-link active" href="merch.html">Merch</a></li>
-          <li class="nav-item"><a class="nav-link" href="musica.html">Música</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-        </ul>
+  <header class="header-vm d-flex sticky-top justify-content-between flex-lg-row-reverse" id="header">
+    <nav class="navbar navbar-vm navbar-expand-lg" id="navbar-principal">
+      <div class="container-fluid">
+        <button class="navbar-toggler me-2" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto gap-lg-2 mt-3 mt-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="shows.html">Shows</a></li>
+            <li class="nav-item"><a class="nav-link" href="merch.html">Merch</a></li>
+            <li class="nav-item"><a class="nav-link" href="musica.html">Música</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+          <button class="cart-btn ms-lg-2" id="btn-carrito" aria-label="Carrito">
+          <i class="bi bi-cart3"></i>
+        </button>
+        </div>
       </div>
-    </div>
-  </nav>
-  
+    </nav>
+    
+    <h1 class="header-brand col-3 align-items-center d-flex mb-0">
+      <a class="h-auto" href="../index.html">VIEJA MINGA</a>
+    </h1>
+  </header>
 
-
-  <div class="offcanvas offcanvas-end cart-offcanvas" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas offcanvas-end cart-offcanvas" tabindex="-1" id="offcanvas">
     <div class="cart-offcanvas__header">
       <div class="cart-offcanvas__title-group">
         <i class="bi bi-cart3 cart-offcanvas__icon"></i>
-        <h5 class="cart-offcanvas__title" id="offcanvasLabel">CARRITO</h5>
+        <h2 class="cart-offcanvas__title" id="offcanvasLabel">CARRITO</h2>
       </div>
       <button type="button" class="cart-offcanvas__close" data-bs-dismiss="offcanvas" aria-label="Cerrar">
         <i class="bi bi-x-lg"></i>
@@ -63,7 +67,7 @@
     <div class="offcanvas-body cart-offcanvas__body">
       <div class="cart-offcanvas__empty">
         <i class="bi bi-bag-x cart-offcanvas__empty-icon"></i>
-        <p class="cart-offcanvas__empty-text">Tu carrito está vacío.</p>
+       <p class="cart-offcanvas__empty-text">Tu carrito está vacío.</p>
         <p class="cart-offcanvas__empty-sub">¡Agregá algo del merch!</p>
       </div>
     </div>
@@ -93,11 +97,13 @@
             <a href="#" class="btn-combo flex-shrink-md-0" id="btn-comprar-combo">COMPRAR COMBO</a>
           </div>
         </div>
+      </div>
+    </div>
   </header>
  
 
 
-  <main class="py-5 px-4" id="productos">
+  <main class="py-5 px-4 texture" id="productos">
     <div class="container-fluid px-0">
 
     
@@ -107,9 +113,17 @@
         <div class="col-12 col-md-6 col-lg-4">
           <article class="merch-card h-100" id="prod-remera-negra">
             <div class="merch-card__img">
+              <picture>
+              <source media="(max-width: 557px)"
+                srcset="../img/remeranegramobile.webp">
+
+              <source media="(max-width: 991px)"
+                srcset="../img/remeranegratablet.webp">
+
               <img class="img-fluid"
-                src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&auto=format&fit=crop&q=80"
-                alt="Remera negra Vieja Minga con logo en blanco y detalles en rosa" />
+                src="../img/remeranegradesktop.webp"
+                alt="Remera negra Vieja Minga con logo en blanco y detalles en rosa">
+            </picture>
             </div>
             <div class="merch-card__body">
               <div class="d-flex align-items-start justify-content-between gap-2 mb-1">
@@ -118,7 +132,7 @@
               </div>
               <p class="merch-card__price">$25.000 ARS</p>
               <div class="mt-auto pt-2">
-                <button class="btn-cart" id="btn-add-remera-negra">ADD TO CART</button>
+                <button class="btn-cart" id="btn-add-remera-negra">AGREGAR</button>
               </div>
             </div>
           </article>
@@ -128,9 +142,18 @@
         <div class="col-12 col-md-6 col-lg-4">
           <article class="merch-card h-100" id="prod-vinilo-2024">
             <div class="merch-card__img" style="background-color:#1f1f1f;">
-              <img class="img-fluid"
-                src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&auto=format&fit=crop&q=80"
-                alt="Vinilo Cumbia Live 2024 de Vieja Minga" style="filter: grayscale(100%);" />
+           <picture>
+          <source media="(max-width: 557px)"
+            srcset="../img/vinilomobile.webp">
+
+          <source media="(max-width: 991px)"
+            srcset="../img/vinilotablet.webp">
+
+          <img class="img-fluid"
+            src="../img/vinilodesktop.webp"
+            alt="Vinilo Cumbia Live 2024 de Vieja Minga"
+            >
+        </picture>
             </div>
             <div class="merch-card__body">
               <div class="d-flex align-items-start justify-content-between gap-2 mb-1">
@@ -138,7 +161,7 @@
               </div>
               <p class="merch-card__price">$45.000 ARS</p>
               <div class="mt-auto pt-2">
-                <button class="btn-cart" id="btn-add-vinilo">ADD TO CART</button>
+                <button class="btn-cart" id="btn-add-vinilo">AGREGAR</button>
               </div>
             </div>
           </article>
@@ -148,9 +171,17 @@
         <div class="col-12 col-md-6 col-lg-4">
           <article class="merch-card h-100" id="prod-gorra-rosa">
             <div class="merch-card__img">
+              <picture>
+              <source media="(max-width: 557px)"
+                srcset="../img/gorramobile.webp">
+
+              <source media="(max-width: 991px)"
+                srcset="../img/gorratablet.webp">
+
               <img class="img-fluid"
-                src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&auto=format&fit=crop&q=80"
-                alt="Gorra con logo rosa de Vieja Minga" />
+                src="../img/gorradesktop.webp"
+                alt="Gorra con logo rosa de Vieja Minga">
+            </picture>
             </div>
             <div class="merch-card__body">
               <div class="d-flex align-items-start justify-content-between gap-2 mb-1">
@@ -158,7 +189,7 @@
               </div>
               <p class="merch-card__price">$15.000 ARS</p>
               <div class="mt-auto pt-2">
-                <button class="btn-cart" id="btn-add-gorra">ADD TO CART</button>
+                <button class="btn-cart" id="btn-add-gorra">AGREGAR</button>
               </div>
             </div>
           </article>
@@ -168,18 +199,26 @@
         <div class="col-12 col-md-6 col-lg-4">
           <article class="merch-card h-100" id="prod-remera-gira">
             <div class="merch-card__img">
+             <picture>
+              <source media="(max-width: 557px)"
+                srcset="../img/vientomobile.webp">
+
+              <source media="(max-width: 991px)"
+                srcset="../img/vientotablet.webp">
+
               <img class="img-fluid"
-                src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&auto=format&fit=crop&q=80"
-                alt="Remera Gira 2026 de Vieja Minga" />
+                src="../img/vientodesktop.webp"
+                alt="Remera Gira 2026 de Vieja Minga">
+            </picture>
             </div>
             <div class="merch-card__body">
               <div class="d-flex align-items-start justify-content-between gap-2 mb-1">
                 <h2 class="merch-card__title">REMERA<br>GIRA 2026</h2>
-                <span class="merch-badge merch-badge--preorder flex-shrink-0">PRE-ORDER</span>
+                <span class="merch-badge merch-badge--preorder flex-shrink-0">PRE-LANZAMIENTO</span>
               </div>
               <p class="merch-card__price">$28.000 ARS</p>
               <div class="mt-auto pt-2">
-                <button class="btn-cart" id="btn-add-gira">PRE-ORDER</button>
+                <button class="btn-cart" id="btn-add-gira">PRE-LANZAMIENTO</button>
               </div>
             </div>
           </article>
@@ -189,9 +228,17 @@
         <div class="col-12 col-md-6 col-lg-4">
           <article class="merch-card h-100" id="prod-hoodie">
             <div class="merch-card__img">
+              <picture>
+              <source media="(max-width: 557px)"
+                srcset="../img/hoddiemobile.webp">
+
+              <source media="(max-width: 991px)"
+                srcset="../img/hoddietablet.webp">
+
               <img class="img-fluid"
-                src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&auto=format&fit=crop&q=80"
-                alt="Hoodie oficial Vieja Minga" />
+                src="../img/hoddiedesktop.webp"
+                alt="Hoodie oficial Vieja Minga">
+            </picture>
             </div>
             <div class="merch-card__body">
               <div class="d-flex align-items-start justify-content-between gap-2 mb-1">
@@ -199,7 +246,7 @@
               </div>
               <p class="merch-card__price">$38.000 ARS</p>
               <div class="mt-auto pt-2">
-                <button class="btn-cart" id="btn-add-hoodie">ADD TO CART</button>
+                <button class="btn-cart" id="btn-add-hoodie">AGREGAR</button>
               </div>
             </div>
           </article>
@@ -209,9 +256,17 @@
         <div class="col-12 col-md-6 col-lg-4">
           <article class="merch-card h-100" id="prod-poster">
             <div class="merch-card__img" style="background-color:#1f1f1f;">
+              <picture>
+              <source media="(max-width: 557px)"
+                srcset="../img/afichemobile.webp">
+
+              <source media="(max-width: 991px)"
+                srcset="../img/afichetablet.webp">
+
               <img class="img-fluid"
-                src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&auto=format&fit=crop&q=80"
-                alt="Poster firmado exclusivo de Vieja Minga" />
+                src="../img/afichedesktop.webp"
+                alt="Poster firmado exclusivo de Vieja Minga">
+            </picture>
             </div>
             <div class="merch-card__body">
               <div class="d-flex align-items-start justify-content-between gap-2 mb-1">
@@ -220,7 +275,7 @@
               </div>
               <p class="merch-card__price">$12.000 ARS</p>
               <div class="mt-auto pt-2">
-                <button class="btn-cart" id="btn-add-poster">ADD TO CART</button>
+                <button class="btn-cart" id="btn-add-poster">AGREGAR</button>
               </div>
             </div>
           </article>
@@ -236,9 +291,17 @@
         <div class="col-12 col-md-6 col-lg-4">
           <article class="merch-card h-100" id="prod-taza">
             <div class="merch-card__img">
+              <picture>
+              <source media="(max-width: 557px)"
+                srcset="../img/tazamobile.webp">
+
+              <source media="(max-width: 991px)"
+                srcset="../img/tazatablet.webp">
+
               <img class="img-fluid"
-                src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&auto=format&fit=crop&q=80"
-                alt="Taza oficial Vieja Minga" />
+                src="../img/tazadesktop.webp"
+                alt="Taza oficial Vieja Minga">
+            </picture>
             </div>
             <div class="merch-card__body">
               <div class="d-flex align-items-start justify-content-between gap-2 mb-1">
@@ -247,7 +310,7 @@
               </div>
               <p class="merch-card__price">$8.000 ARS</p>
               <div class="mt-auto pt-2">
-                <button class="btn-cart" id="btn-add-taza">ADD TO CART</button>
+                <button class="btn-cart" id="btn-add-taza">AGREGAR</button>
               </div>
             </div>
           </article>
@@ -257,9 +320,17 @@
         <div class="col-12 col-md-6 col-lg-4">
           <article class="merch-card h-100" id="prod-bandana">
             <div class="merch-card__img">
+              <picture>
+              <source media="(max-width: 557px)"
+                srcset="../img/bandanamobile.webp">
+
+              <source media="(max-width: 991px)"
+                srcset="../img/bandanatablet.webp">
+
               <img class="img-fluid"
-                src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&auto=format&fit=crop&q=80"
-                alt="Bandana Vieja Minga" />
+                src="../img/bandanadesktop.webp"
+                alt="Bandana Vieja Minga">
+            </picture>
             </div>
             <div class="merch-card__body">
               <div class="d-flex align-items-start justify-content-between gap-2 mb-1">
@@ -267,7 +338,7 @@
               </div>
               <p class="merch-card__price">$6.500 ARS</p>
               <div class="mt-auto pt-2">
-                <button class="btn-cart" id="btn-add-bandana">ADD TO CART</button>
+                <button class="btn-cart" id="btn-add-bandana">AGREGAR</button>
               </div>
             </div>
           </article>
@@ -335,7 +406,7 @@
 
       </div>
       <div class="footer-bottom">
-        <small>&copy; 2026 VIEJA MINGA — LUCIA SORIANO</small>
+        <small>&copy; 2026 VIEJA MINGA —  Lucía Soriano · Diseño Gráfico · 2° Cuatrimestre</small>
       </div>
     </div>
   </footer>

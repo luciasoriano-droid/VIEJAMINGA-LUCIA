@@ -15,38 +15,41 @@
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
-
-
-  <nav class="navbar navbar-vm navbar-expand-lg sticky-top" id="navbar-principal">
-    <div class="container-fluid">
-      <button class="navbar-toggler me-2" type="button"
-              data-bs-toggle="collapse" data-bs-target="#navMenu"
-              aria-controls="navMenu" aria-expanded="false"
-              aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand mx-auto" href="../index.html">VIEJA MINGA</a>
-      <button class="cart-btn ms-2" id="btn-carrito" aria-label="Carrito">
-        <i class="bi bi-cart3"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto gap-lg-2 mt-3 mt-lg-0">
-          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="shows.html">Shows</a></li>
-          <li class="nav-item"><a class="nav-link" href="merch.html">Merch</a></li>
-          <li class="nav-item"><a class="nav-link" href="musica.html">Música</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-        </ul>
+  <header class="header-vm d-flex sticky-top justify-content-between flex-lg-row-reverse" id="header">
+    <nav class="navbar navbar-vm navbar-expand-lg" id="navbar-principal">
+      <div class="container-fluid">
+        <button class="navbar-toggler me-2" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto gap-lg-2 mt-3 mt-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="shows.html">Shows</a></li>
+            <li class="nav-item"><a class="nav-link" href="merch.html">Merch</a></li>
+            <li class="nav-item"><a class="nav-link" href="musica.html">Música</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+          <button class="cart-btn ms-lg-2" id="btn-carrito" aria-label="Carrito">
+          <i class="bi bi-cart3"></i>
+        </button>
+        </div>
       </div>
-    </div>
-  </nav>
-
+    </nav>
+    
+    <h1 class="header-brand col-3 align-items-center d-flex mb-0">
+      <a class="h-auto" href="../index.html">VIEJA MINGA</a>
+    </h1>
+  </header>
  
-  <div class="offcanvas offcanvas-end cart-offcanvas" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas offcanvas-end cart-offcanvas" tabindex="-1" id="offcanvas">
     <div class="cart-offcanvas__header">
       <div class="cart-offcanvas__title-group">
         <i class="bi bi-cart3 cart-offcanvas__icon"></i>
-        <h5 class="cart-offcanvas__title" id="offcanvasLabel">CARRITO</h5>
+        <h2 class="cart-offcanvas__title" id="offcanvasLabel">CARRITO</h2>
       </div>
       <button type="button" class="cart-offcanvas__close" data-bs-dismiss="offcanvas" aria-label="Cerrar">
         <i class="bi bi-x-lg"></i>
@@ -64,14 +67,154 @@
     </div>
   </div>
 
- 
-  <main class="py-5">
-    <div class="container-fluid px-4">
-      <h1 class="section-title mb-4">Musica<br><span>VM</span></h1>
-      <p style="color: var(--color-muted);">ME FALTA HACERLO...</p>
-    </div>
-  </main>
+<main class="py-5 texture" id="musica">
+  <div class="container-fluid px-4">
 
+    <header class="heading-border-bottom mb-5">
+      <p class="section-label mb-1">MÚSICA</p>
+      <h1 class="section-title mb-0">
+        ESCUCHÁ<br><span>VIEJA MINGA</span>
+      </h1>
+    </header>
+
+    <p class="section-subtitle mb-5">
+      Canciones, videoclips y registros en vivo que reflejan la identidad y el espíritu popular de la banda.
+    </p>
+
+    <div class="row g-4">
+
+   
+      <div class="col-12 col-md-6 col-lg-3">
+  <article class="card-vm h-100">
+
+    <a href="https://www.youtube.com/watch?v=Wrt5Bngf1mQ"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="video-link">
+      <picture>
+  <source media="(max-width: 557px)"
+          srcset="../img/frenteescenariomobile.webp">
+
+  <source media="(max-width: 991px)"
+          srcset="../img/frenteescenariotablet.webp">
+
+  <img src="../img/frenteescenariodesktop.webp"
+       alt="Mirador Sessions - Vieja Minga"
+       class="img-fluid video-img">
+</picture>
+
+      <div class="play-btn">
+        <i class="bi bi-play-fill"></i>
+      </div>
+    </a>
+
+    <div class="card-body">
+      <h2 class="card-title">Mirador SESSIONS</h2>
+      <p class="card-price">
+        Uno de los temas más representativos de la banda, con ritmo festivo y espíritu popular.
+      </p>
+    </div>
+
+  </article>
+</div>
+      
+     <div class="col-12 col-md-6 col-lg-3">
+  <article class="card-vm h-100">
+
+    <a href="https://www.youtube.com/watch?v=UST-fbizOyU"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="video-link">
+      <picture>
+        <source media="(max-width: 557px)"
+                srcset="../img/todosescenariomobile.webp">
+
+        <source media="(max-width: 991px)"
+                srcset="../img/todosescenariotablet.webp">
+
+        <img src="../img/todosescenariodesktop.webp"
+             alt="Un Gran Beso - Vieja Minga"
+             class="img-fluid video-img">
+      </picture>
+      <div class="play-btn">
+        <i class="bi bi-play-fill"></i>
+      </div>
+    </a>
+    <div class="card-body">
+      <h2 class="card-title">UN GRAN BESO</h2>
+      <p class="card-price">
+        Una canción cargada de energía que combina identidad barrial y sonido popular.
+      </p>
+    </div>
+
+  </article>
+</div>
+
+
+      <div class="col-12 col-md-6 col-lg-3">
+  <article class="card-vm h-100">
+
+    <a href="https://www.youtube.com/watch?v=Io9iQMS_cn0"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="video-link">
+      <picture>
+        <source media="(max-width: 557px)"
+                srcset="../img/natinachoescenariomobile.webp">
+
+        <source media="(max-width: 991px)"
+                srcset="../img/natinachoescenariotablet.webp">
+
+        <img src="../img/natinachoescenariodesktop.webp"
+             alt="La Parranda - Vieja Minga"
+             class="img-fluid video-img">
+      </picture>
+
+      <div class="play-btn">
+        <i class="bi bi-play-fill"></i>
+      </div>
+    </a>
+    <div class="card-body">
+      <h2 class="card-title">LA PARRANDA</h2>
+      <p class="card-price">
+        Una producción audiovisual que acompaña la propuesta estética y musical de Vieja Minga.
+      </p>
+    </div>
+
+  </article>
+</div>
+
+     
+      <div class="col-12 col-md-6 col-lg-3">
+  <article class="card-vm h-100">
+    <a href="https://www.youtube.com/watch?v=ZdNUQeOmSi8"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="video-link">
+      <picture>
+        <source media="(max-width: 557px)"
+                srcset="../img/escenariodeatrasmobile.webp">
+
+        <source media="(max-width: 991px)"
+                srcset="../img/escenariodeatrastablet.webp">
+
+        <img src="../img/escenariodeatrasdesktop.webp"
+             alt="No Hay Veneno - Vieja Minga"
+             class="img-fluid video-img">
+      </picture>
+      <div class="play-btn">
+        <i class="bi bi-play-fill"></i>
+      </div>
+    </a>
+    <div class="card-body">
+      <h2 class="card-title">NO HAY VENENO</h2>
+      <p class="card-price">
+        Un registro que muestra la fuerza de la banda sobre el escenario y la conexión con el público.
+      </p>
+    </div>
+
+  </article>
+</div>
        
 
   <footer class="footer-vm" id="footer">
@@ -106,7 +249,7 @@
 
       </div>
       <div class="footer-bottom">
-        <small>&copy; 2026 VIEJA MINGA — LUCIA SORIANO</small>
+        <small>&copy; 2026 VIEJA MINGA —  Lucía Soriano · Diseño Gráfico · 2° Cuatrimestre</small>
       </div>
     </div>
   </footer>

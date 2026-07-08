@@ -24,56 +24,41 @@
 </head>
 
 <body>
-
-  
-  <nav class="navbar navbar-vm navbar-expand-lg sticky-top" id="navbar-principal">
-    <div class="container-fluid">
-
-      
-      <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      
-      <a class="navbar-brand mx-auto" href="index.html">VIEJA MINGA</a>
-
-      
-      <button class="cart-btn ms-2" id="btn-carrito" aria-label="Carrito">
-        <i class="bi bi-cart3"></i>
-      </button>
-
- 
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto gap-lg-2 mt-3 mt-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="secciones/shows.html">Shows</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="secciones/merch.html">Merch</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="secciones/musica.html">Música</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="secciones/contacto.html">Contacto</a>
-          </li>
-        </ul>
+  <header class="header-vm d-flex sticky-top justify-content-between flex-lg-row-reverse" id="header">
+    <nav class="navbar navbar-vm navbar-expand-lg" id="navbar-principal">
+      <div class="container-fluid">
+        <button class="navbar-toggler me-2" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto gap-lg-2 mt-3 mt-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="secciones/shows.html">Shows</a></li>
+            <li class="nav-item"><a class="nav-link" href="secciones/merch.html">Merch</a></li>
+            <li class="nav-item"><a class="nav-link" href="secciones/musica.html">Música</a></li>
+            <li class="nav-item"><a class="nav-link" href="secciones/contacto.html">Contacto</a></li>
+          </ul>
+          <button class="cart-btn ms-lg-2" id="btn-carrito" aria-label="Carrito">
+          <i class="bi bi-cart3"></i>
+        </button>
+        </div>
       </div>
+    </nav>
 
-    </div>
-  </nav>
+    <h1 class="header-brand col-3 align-items-center d-flex mb-0">
+      <a class="h-auto" href="index.html">VIEJA MINGA</a>
+    </h1>
+  </header>
  
-
- 
-  <div class="offcanvas offcanvas-end cart-offcanvas" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas offcanvas-end cart-offcanvas" tabindex="-1" id="offcanvas">
     <div class="cart-offcanvas__header">
       <div class="cart-offcanvas__title-group">
         <i class="bi bi-cart3 cart-offcanvas__icon"></i>
-        <h5 class="cart-offcanvas__title" id="offcanvasLabel">CARRITO</h5>
+        <h2 class="cart-offcanvas__title" id="offcanvasLabel">CARRITO</h2>
       </div>
       <button type="button" class="cart-offcanvas__close" data-bs-dismiss="offcanvas" aria-label="Cerrar">
         <i class="bi bi-x-lg"></i>
@@ -92,16 +77,24 @@
   </div>
 
 
-  <section class="hero-carousel" id="hero" aria-label="Carrusel principal">
+  <section class="hero-carousel texture" id="hero" aria-label="Carrusel principal">
     <div id="carouselHero" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
       <div class="carousel-inner">
 
      
         <div class="carousel-item active">
-          <img class="img-fluid"
-            src="./img/Vieja Minga_-368.jpg"
-            alt="Show en vivo" />
+          <picture>
+      <source media="(max-width: 557px)"
+        srcset="./img/natinachoescenariomobile.webp">
+
+      <source media="(max-width: 991px)"
+        srcset="./img/natinachoescenariotablet.webp">
+
+      <img class="img-fluid"
+        src="./img/natinachoescenariodesktop.webp"
+        alt="Show en vivo">
+    </picture>  
           <div class="hero-caption">
             <h1>VIEJA<br><span>MINGA</span></h1>
           </div>
@@ -109,10 +102,17 @@
 
       
         <div class="carousel-item">
-       <img class="img-fluid"
-         src="./img/vieja-minga_-548.jpg"
-         alt="Vieja Minga en vivo" />
+       <picture>
+        <source media="(max-width: 557px)"
+          srcset="./img/todosescenariomobile.webp">
 
+        <source media="(max-width: 991px)"
+          srcset="./img/todosescenariotablet.webp">
+
+        <img class="img-fluid"
+          src="./img/todosescenariodesktop.webp"
+          alt="Vieja Minga en vivo">
+      </picture>
     <div class="hero-caption">
             <h1>PRÓXIMOS<br><span>SHOWS</span></h1>
           </div>
@@ -120,9 +120,17 @@
 
       
         <div class="carousel-item">
-          <img class="img-fluid"
-            src="./img/Vieja Minga_-464.jpg"
-            alt="Público en el recital" />
+          <picture>
+  <source media="(max-width: 557px)"
+    srcset="./img/escenariodeatrasmobile.webp">
+
+  <source media="(max-width: 991px)"
+    srcset="./img/escenariodeatrastablet.webp">
+
+  <img class="img-fluid"
+    src="./img/escenariodeatrasdesktop.webp"
+    alt="Público en el recital">
+</picture>
           <div class="hero-caption">
             <h1>MERCH<br><span>OFICIAL</span></h1>
           </div>
@@ -155,24 +163,25 @@
   <hr class="divider-pink m-0" />
 
   <section class="py-5 bg-surface" id="historia-preview">
-    <div class="container-fluid px-4 d-flex flex-column flex-lg-row lg-m-50">
+    <div class="container-fluid px-4 d-flex flex-column flex-lg-row lg-m-50 align-items-center">
 
       <div class="d-flex flex-column gap-3 mb-4 pt-lg-4">
         <h2 class="section-title mb-0">HISTORIA</h2>
-        <p class="fs-6 fs-lg-4 pe-lg-5 pt-lg-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
-          sapiente magni
-          velit
-          adipisci voluptates
-          neque iste, temporibus impedit quod explicabo veritatis dolorem ab officiis rerum illum debitis. Error,
-          dolorem
-          ratione.
+        <p class="fs-6 fs-lg-4 pe-lg-5 pt-lg-4">Vieja Minga nació en Tandil como el encuentro de catorce amigos unidos por la pasión por la música. Con una formación amplia y diversa, cada integrante aporta su propio estilo e identidad, combinando instrumentos, voces y experiencias que enriquecen el proyecto. Más allá de la banda, cada uno desarrolla su vida personal y profesional, haciendo de la música un espacio de encuentro, disfrute y expresión. Lo que comenzó como una reunión entre amigos se transformó en una propuesta colectiva que sigue creciendo con cada ensayo, show y canción.
         </p>
       </div>
 
+<picture class="col-lg-6 p-lg-4">
+  <source media="(max-width: 557px)"
+    srcset="img/natinachoescenariomobile.webp">
 
-      <img class="col-lg-7 p-lg-4"
-        src="img/Vieja Minga_-498.jpg" />
+  <source media="(max-width: 991px)"
+    srcset="img/natinachoescenariotablet.webp">
 
+  <img class="img-fluid"
+    src="img/natinachoescenariodesktop.webp"
+    alt="Historia de Vieja Minga">
+</picture>
     </div>
   </section>
  
@@ -191,39 +200,66 @@
       <div class="d-flex flex-column gap-3">
 
      
-        <div class="d-flex align-items-center justify-content-between p-3 card-vm">
-          <div class="w-50">
+        <div class="d-flex flex-column flex-md-row p-3 card-vm align-items-center justify-content-between">
+          <div class="w-md-50 w-90 mb-3 mb-md-0">
             <p class="mb-0" style="font-family: var(--font-display); font-size:1.4rem; color:#fff;">
               Buenos Aires — Luna Park
             </p>
             <span style="color: var(--color-muted);" class="fs-lg-1">15 de Agosto, 2026</span>
           </div>
-          <img class="w-50"
-            src="img/Vieja Minga_-548.jpg" alt="show1">
+          <picture class="col-10 col-md-6 pb-3 pb-md-0">
+  <source media="(max-width: 557px)"
+    srcset="img/vientomobile.webp">
+
+  <source media="(max-width: 991px)"
+    srcset="img/vientotablet.webp">
+
+  <img class="w-100"
+    src="img/vientodesktop.webp"
+    alt="show1">
+</picture>
         </div>
 
       
-        <div class="d-flex align-items-center justify-content-between p-3 card-vm">
-          <div class="w-50">
-            <p class="mb-0" style="font-family: var(--font-display); font-size:1.4rem; color:#fff;">
+        <div class="d-flex flex-column flex-md-row p-3 card-vm align-items-center justify-content-between">
+          <div class="w-md-50 w-90 mb-3 mb-md-0">
+            <p class="mb-0 text-break" style="font-family: var(--font-display); font-size:1.4rem; color:#fff;">
               Córdoba — Orfeo Superdomo
             </p>
             <small style="color: var(--color-muted);">22 de Agosto, 2026</small>
           </div>
-          <img class="w-50"
-            src="img/Vieja Minga_-263.jpg" alt="show2">
+          <picture class="col-10 col-md-6 pb-3 pb-md-0">
+          <source media="(max-width: 557px)"
+            srcset="img/escenariodeatrasmobile.webp">
+
+          <source media="(max-width: 991px)"
+            srcset="img/escenariodeatrastablet.webp">
+
+          <img class="w-100"
+            src="img/escenariodeatrasdesktop.webp"
+            alt="show2">
+        </picture>
         </div>
 
        
-        <div class="d-flex align-items-center justify-content-between p-3 card-vm">
-          <div class="w-50">
+        <div class="d-flex flex-column flex-md-row p-3 card-vm align-items-center justify-content-between">
+          <div class="w-md-50 w-90 mb-3 mb-md-0">
             <p class="mb-0" style="font-family: var(--font-display); font-size:1.4rem; color:#fff; text-wrap: wrap;">
               Tandil — Union & Progreso
             </p>
             <small style="color: var(--color-muted);">30 de Agosto, 2026</small>
           </div>
-          <img class="w-50"
-            src="img/Vieja Minga_-293.jpg" alt="show3">
+          <picture class="col-10 col-md-6 pb-3 pb-md-0">
+          <source media="(max-width: 557px)"
+            srcset="img/todosescenariomobile.webp">
+
+          <source media="(max-width: 991px)"
+            srcset="img/todosescenariotablet.webp">
+
+          <img class="w-100"
+            src="img/todosescenariodesktop.webp"
+            alt="show3">
+        </picture>
         </div>
 
       </div>
@@ -267,7 +303,7 @@
 
       </div>
       <div class="footer-bottom">
-        <small>&copy; 2026 VIEJA MINGA — LUCIA SORIANO</small>
+        <small>&copy; 2026 VIEJA MINGA —  Lucía Soriano · Diseño Gráfico · 2° Cuatrimestre</small>
       </div>
     </div>
   </footer>
